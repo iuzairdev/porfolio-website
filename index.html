@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ====== GENERAL STYLES ====== */
+    body {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      color: #e0e0e0;
+      background-color: #0a0f14; /* dark terminal background */
+      line-height: 1.6;
+    }
+
+    /* ====== NAVIGATION ====== */
+    header {
+      background: #0d1117;
+      border-bottom: 1px solid #1f2933;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #00c8ff;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #c9d1d9;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c8ff;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      background: linear-gradient(to right, #0d1117, #1b2838);
+      color: #00ffae;
+      text-align: center;
+      padding: 100px 20px;
+      border-bottom: 1px solid #1f2933;
+    }
+
+    .hero-content h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #9ca3af;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #00ffae;
+      color: #0a0f14;
+      padding: 10px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00c8ff;
+      color: #fff;
+    }
+
+    /* ====== ABOUT SECTION ====== */
+    .about {
+      max-width: 800px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .about h2 {
+      color: #00c8ff;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #b0b8c1;
+      font-size: 1.05rem;
+    }
+
+    /* ====== WORK SECTION ====== */
+    .work {
+      background: #101820;
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 1px solid #1f2933;
+    }
+
+    .work h2 {
+      color: #00ffae;
+      margin-bottom: 40px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: #0d141c;
+      border: 1px solid #1f2933;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      width: 300px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #00c8ff;
+      box-shadow: 0 8px 16px rgba(0,200,255,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card h3 {
+      padding: 15px;
+      color: #00ffae;
+    }
+
+    /* ====== CONTACT SECTION ====== */
+    .contact {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(90deg, #0a0f14, #1b2838);
+      color: #e0e0e0;
+    }
+
+    .contact h2 {
+      color: #00c8ff;
+      margin-bottom: 20px;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0a0f14;
+      color: #7a818a;
+      font-size: 0.9rem;
+      border-top: 1px solid #1f2933;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header>
+    <nav>
+      <h1 class="logo">Uzair Ali</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>$ whoami</h2>
+      <p>I'm Uzair Ali — a DevOps Engineer passionate about automation, CI/CD, and cloud infrastructure.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="about">
+    <h2>$ cat about_me.txt</h2>
+    <p>
+      I specialize in building scalable DevOps pipelines, automating infrastructure with Terraform and Ansible,  
+      and deploying resilient systems using Docker, Kubernetes, and AWS.  
+      My goal: to bridge the gap between development and operations efficiently.
+    </p>
+  </section>
+
+  <!-- ====== WORK SECTION ====== -->
+  <section id="projects" class="work">
+    <h2>$ ls ~/projects</h2>
+
+    <div class="projects">
+      <div class="card">
+        <img src="https://www.qualitapps.com/wp-content/uploads/2023/09/devops-concept-feat-1.jpg" alt="CI/CD Pipeline">
+        <h3>CI/CD Pipeline with Jenkins & GitHub Actions</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn.prod.website-files.com/62ae3d8b4e778097a8aa6600/63861c44045ce54f3bd41f0d_Kubernetes-logo.png" alt="Kubernetes Cluster">
+        <h3>Kubernetes Cluster Setup on AWS EKS</h3>
+      </div>
+      <div class="card">
+        <img src="https://malecloud.in/content/images/2024/09/image-blog-monitoring-java-applications-with-prometheus-and-grafana-part-2.jpg" alt="Monitoring Stack">
+        <h3>Monitoring Stack (Prometheus + Grafana)</h3>
+      </div>
+      <div class="card">
+        <img src="https://scalefactory.com/blog/2020/06/25/what-we-are-looking-forward-to-in-terraform-0.13/Terraform.png" alt="Terraform Infrastructure">
+        <h3>Infrastructure as Code with Terraform</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact" class="contact">
+    <h2>$ ping me</h2>
+    <p>Have a project in mind or want to collaborate?</p>
+    <a href="https://www.linkedin.com/in/iuzairdev" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 Uzair Ali — DevOps Engineer | Crafted with 💻 & ❤️</p>
+  </footer>
+
+</body>
+</html>
